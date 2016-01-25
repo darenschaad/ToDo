@@ -1,0 +1,20 @@
+#show-task {
+  display: none;
+}
+
+.task {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.task:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.taskTitle {
+  display: none;
+}
