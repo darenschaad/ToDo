@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $(".taskTitle").show();
 
-    $("ul#tasks").append("<li><span class='task'>" + newToDo.task + "</span></li>");
+    $("ul#tasks").append("<span class='task' id =" + inputtedTask + "><li>" + newToDo.task + "</li></span>");
 
     $("input#inputtedTask").val("");
     $("input#inputtedNotes").val("");
@@ -25,12 +25,20 @@ $(document).ready(function() {
 
     $(".task").last().click(function() {
       $("#show-task").show();
+      $(".deleteButton").remove();
       $("#show-task h2").text(newToDo.task);
       $(".notes").text(newToDo.notes);
       $(".date").text(newToDo.date);
-
+       $("#show-task").append("<span class='deleteButton'><button id='" + inputtedTask + "' class='deleteTask'>Delete Task</button></span>");
     });
 
-
+    $(document).on('click', '.deleteTask', function() {
+      $("#show-task").last().hide();
+      $("span#" + this.id).remove();
+    });
   });
+
 });
+
+
+// btn btn-danger btn-md
