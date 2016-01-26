@@ -1,5 +1,6 @@
 #show-task {
   display: none;
+  padding-top: 100px;
 }
 
 .task {
@@ -12,9 +13,28 @@
 }
 
 button {
-  margin-top: 20px;
+  margin-top: -16px;
 }
 
 .taskTitle {
   display: none;
+}
+
+#tasks {
+  font-size: 146.4%;
+  padding-top: 140px;
+  padding-left: 80px;
+  background-image: url("../img/notepad.jpg");
+  background-size: cover;
+  font-family: fantasy;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.form-group {
+  font-size: 1.2em;
+}
+.deleteTask {
+  margin-top: 20px;
 }

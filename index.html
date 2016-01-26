@@ -10,56 +10,55 @@
   </head>
   <body>
     <div class="container">
-      <h2>To Do List</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <p class="lead">Things I need to Do</p>
-          <form id="new-task">
-            <div class="form-group">
-              <div class="col-md-7">
-                <label for="inputtedTask">Task:</label>
-              </div>
-              <div class="col-md-5">
-                <input id="inputtedTask" type="text">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-7">
-                <label for="inputtedNotes">Notes:</label>
-              </div>
-              <div class="col-md-5">
-                <input id="inputtedNotes" type="text">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-md-7">
-                <label for="inputtedCompleteDate">Complete By:</label>
-              </div>
-              <div class="col-md-5">
-                <input id="inputtedCompleteDate" type="date">
-              </div>
-
-              <br></br>
-            </div>
-            <button type="submit" class="btn" btn-lg btn-primary>Add To Do</button>
-          </form>
-          <div class="taskTitle">
-            <h2>Things To Do:</h2>
-            <ul id="tasks">
-            </ul>
+      <h1>To Do List</h1>
+      <p class="lead"><b>Things I need to Do</b></p>
+      <form id="new-task">
+        <div class="form-group">
+          <div>
+            <label for="inputtedTask">Task:</label>
+          </div>
+          <div>
+            <input id="inputtedTask" type="text">
           </div>
         </div>
+        <div class="form-group">
+          <div>
+            <label for="inputtedNotes">Notes:</label>
+          </div>
+          <div>
+            <input id="inputtedNotes" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="inputtedCompleteDate">Complete By:</label>
+          </div>
+          <div>
+            <input id="inputtedCompleteDate" type="date">
+          </div>
 
-        <div class="col-md-6">
-          <div id="show-task">
-            <h2></h2>
-            <p>Notes: <span class="notes"</span></p>
-            <p>Complete By: <span class="date"</span></p>
-
+            <br></br>
+        </div>
+        <button type="submit" class="btn btn-lg btn-primary">Add Task!</button>
+        </form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="taskTitle">
+              <h2>Things To Do:</h2>
+              <p>Click any task to see its details or delete it.</p>
+              <ol id="tasks">
+              </ol>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="show-task">
+              <h2></h2>
+              <p>Notes: <span class="notes"</span></p>
+                <p>Complete By: <span class="date"</span></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
 

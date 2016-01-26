@@ -14,10 +14,12 @@ $(document).ready(function() {
     var inputtedNotes = $("input#inputtedNotes").val();
     var inputtedCompleteDate = $("input#inputtedCompleteDate").val();
     var newToDo = new ToDo(inputtedTask, inputtedNotes, inputtedCompleteDate);
+    var noSpace = inputtedTask.replace(/\s+/g, '');
+    var nothing = noSpace.replace(/[^\w\s]/gi, '');
 
     $(".taskTitle").show();
 
-    $("ul#tasks").append("<span class='task' id =" + inputtedTask + "><li>" + newToDo.task + "</li></span>");
+    $("ol#tasks").append("<span class='task' id =" + nothing + "><li>" + newToDo.task + "</li></span>");
 
     $("input#inputtedTask").val("");
     $("input#inputtedNotes").val("");
@@ -29,7 +31,7 @@ $(document).ready(function() {
       $("#show-task h2").text(newToDo.task);
       $(".notes").text(newToDo.notes);
       $(".date").text(newToDo.date);
-       $("#show-task").append("<span class='deleteButton'><button id='" + inputtedTask + "' class='deleteTask'>Delete Task</button></span>");
+       $("#show-task").append("<span class='deleteButton'><button id='" + nothing + "' class='btn btn-danger btn-md deleteTask'>Delete Task</button></span>");
     });
 
     $(document).on('click', '.deleteTask', function() {
